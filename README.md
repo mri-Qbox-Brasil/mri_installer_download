@@ -1,5 +1,7 @@
 # MRI Installer - Distribuição Oficial 🚀
 
+Read this in: [🇺🇸 English](README.en.md) | [🇪🇸 Español](README.es.md)
+
 O **MRI Installer** é a porta de entrada para o ecossistema **MRI Qbox Brasil**. Uma ferramenta profissional, resiliente e segura para automatizar a instalação do seu servidor FiveM.
 
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/mri-Qbox-Brasil/mri_installer_download?style=for-the-badge&color=7289da)](https://github.com/mri-Qbox-Brasil/mri_installer_download/releases/latest)
