@@ -23,7 +23,7 @@ Diferente de instaladores comuns, o MRI foi construído com foco em **estabilida
 3. Execute o instalador e siga os 5 passos guiados.
 
 > [!TIP]
-> **Dica de Segurança**: Certifique-se sempre de estar baixando o executável deste repositório oficial da organização **MRI Qbox Brasil**.
+> **Dica de Segurança**: Certifique-se sempre de baixar o executável deste repositório oficial da organização **MRI Qbox Brasil**.
 
 ## 🛡️ Transparência e Segurança
 
