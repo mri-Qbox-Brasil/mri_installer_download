@@ -27,9 +27,10 @@ Diferente de instaladores comuns, o MRI foi construído com foco em **estabilida
 
 ## 🛡️ Transparência e Segurança
 
-Nós levamos a segurança da nossa comunidade a sério. Por isso, integramos nosso pipeline de publicação com a API do **VirusTotal**. 
+Nós levamos a segurança da nossa comunidade a sério. Por isso, integramos nosso pipeline de publicação com a API do **VirusTotal**.
 
 Você pode encontrar o selo de segurança e o link para o relatório técnico completo na descrição de cada versão lançada.
 
 ---
+
 Desenvolvido com ❤️ pela equipe [MRI QBOX BRASIL](https://github.com/mri-qbox-brasil)
