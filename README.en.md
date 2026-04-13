@@ -15,14 +15,15 @@ Unlike common installers, MRI was built with a focus on **stability** and **secu
 
 - 🛡️ **Verified Security**: Every version uploaded to this repository is automatically scanned by **VirusTotal**. The report link is available in each release.
 - 💾 **Resilient Installation (Resume)**: Did the internet drop or the PC shut down? The installer detects where it left off and resumes progress automatically, without corrupting files.
-- 🗄️ **Automatic Database**: Don't have MariaDB installed? The software takes care of it for you in the background, configuring everything on your machine.
-- 🇺🇸 **Fully in English**: Intuitive interface and full support for the English language.
+- 🗄️ **Automatic Database**: Don't have MariaDB installed? The software takes care of it for you in the background, with resilience against Windows blocking (UAC).
+- 👑 **Personalized txAdmin**: The installer automatically configures your server name and language in the management panel.
+- 🇺🇸 **Multilingual Support**: Intuitive interface and full support for English, Portuguese, and Spanish.
 
 ## 🚀 How to Get Started
 
 1. Go to the [**Releases**](https://github.com/mri-Qbox-Brasil/mri_installer_download/releases/latest) tab.
 2. Download the `mri_installer.exe` file.
-3. Run the installer and follow the 5 guided steps.
+3. Run the installer and follow the 7 guided steps (Environment, Engine, Recipe, Summary, Deploy, Configuration, and Dashboard).
 
 > [!TIP]
 > **Security Tip**: Always make sure to download the executable from this official repository of the **MRI Qbox Brasil** organization.

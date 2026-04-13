@@ -15,14 +15,15 @@ Diferente de instaladores comuns, o MRI foi construído com foco em **estabilida
 
 - 🛡️ **Segurança Verificada**: Cada versão enviada para este repositório é automaticamente escaneada pelo **VirusTotal**. O link do relatório está disponível em cada release.
 - 💾 **Instalação Resiliente (Resume)**: Caiu a internet ou o PC desligou? O instalador detecta onde parou e retoma o progresso automaticamente, sem corromper arquivos.
-- 🗄️ **Banco de Dados Automático**: Não tem o MariaDB instalado? O software cuida disso pra você em background, configurando tudo na sua máquina.
-- 🌎 **Totalmente em Português**: Interface intuitiva e suporte completo ao nosso idioma.
+- 🗄️ **Banco de Dados Automático**: Não tem o MariaDB instalado? O software cuida disso pra você em background, com resiliência contra bloqueios do Windows (UAC).
+- 👑 **txAdmin Personalizado**: O instalador configura automaticamente o nome do seu servidor e o idioma no painel administrativo.
+- 🌎 **Totalmente em Português**: Interface intuitiva e suporte completo ao nosso idioma (disponível também em Inglês e Espanhol).
 
 ## 🚀 Como Começar
 
 1. Vá até a aba [**Releases**](https://github.com/mri-Qbox-Brasil/mri_installer_download/releases/latest).
 2. Baixe o arquivo `mri_installer.exe`.
-3. Execute o instalador e siga os 5 passos guiados.
+3. Execute o instalador e siga os 7 passos guiados (Ambiente, Motor, Receita, Resumo, Deploy, Configuração e Dashboard).
 
 > [!TIP]
 > **Dica de Segurança**: Certifique-se sempre de baixar o executável deste repositório oficial da organização **MRI Qbox Brasil**.
