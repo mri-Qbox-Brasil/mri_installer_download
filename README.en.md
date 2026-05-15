@@ -18,12 +18,36 @@ Unlike common installers, MRI was built with a focus on **stability** and **secu
 - 🗄️ **Automatic Database**: Don't have MariaDB installed? The software takes care of it for you in the background, with resilience against Windows blocking (UAC).
 - 👑 **Personalized txAdmin**: The installer automatically configures your server name and language in the management panel.
 - 🇺🇸 **Multilingual Support**: Intuitive interface and full support for English, Portuguese, and Spanish.
+- 🐧 **Linux Support**: Native binary for Linux servers with an interactive terminal installer or fully automated via flags.
 
 ## 🚀 How to Get Started
+
+### Windows (graphical interface)
 
 1. Go to the [**Releases**](https://github.com/mri-Qbox-Brasil/mri_installer_download/releases/latest) tab.
 2. Download the `mri_installer.exe` file.
 3. Run the installer and follow the 7 guided steps (Environment, Engine, Recipe, Summary, Deploy, Configuration, and Dashboard).
+
+### Linux (terminal / headless server)
+
+1. Go to the [**Releases**](https://github.com/mri-Qbox-Brasil/mri_installer_download/releases/latest) tab.
+2. Download the `mri_installer_linux` file.
+3. Grant execute permission and run:
+
+```bash
+chmod +x mri_installer_linux
+
+# Interactive mode (recommended for beginners)
+./mri_installer_linux
+
+# Non-interactive mode (full flags)
+./mri_installer_linux \
+  --install-path /opt/fivem/mri_qbox \
+  --server-name "My Server" \
+  --license-key "cfxk_..." \
+  --db-pass "password" \
+  --install-mariadb
+```
 
 > [!TIP]
 > **Security Tip**: Always make sure to download the executable from this official repository of the **MRI Qbox Brasil** organization.
