@@ -15,7 +15,7 @@ A diferencia de los instaladores comunes, MRI fue construido centrándose en la 
 
 - 🛡️ **Seguridad Verificada**: Cada versión enviada a este repositorio es escaneada automáticamente por **VirusTotal**. El enlace del informe está disponible en cada release.
 - 💾 **Instalación Resiliente (Resume)**: ¿Se cayó el internet o se apagó la PC? El instalador detecta dónde se detuvo y reanuda el progreso automáticamente, sin corromper archivos.
-- 🗄️ **Base de Datos Automática**: ¿No tiene MariaDB instalado? El software se encarga de eso por usted en segundo plano, con resiliencia contra bloqueos de Windows (UAC).
+- 🗄️ **Base de Datos Automática**: ¿No tiene MariaDB instalado? El software se encarga de eso por usted en segundo plano, con resiliencia contra bloqueos de Windows (UAC). ¿Ya tiene una base de datos? Apúntela a cualquier host/puerto existente y vea la contraseña mientras la configura.
 - 👑 **txAdmin Personalizado**: El instalador configura automáticamente el nombre de su servidor y el idioma en el panel administrativo.
 - 🌎 **Soporte Multilingüe**: Interfaz intuitiva y soporte completo para español, portugués e inglés.
 - 🐧 **Soporte para Linux**: Binario nativo para servidores Linux con instalador de terminal interactivo o totalmente automatizado mediante flags.
@@ -49,6 +49,9 @@ chmod +x mri_installer_linux
   --install-mariadb
 ```
 
+> [!NOTE]
+> En modo interactivo, el instalador muestra un **código de autorización** de 8 caracteres. Autorízalo ejecutando `/liberar <código>` en nuestro Discord **o** abriendo el enlace mostrado — sin necesidad de navegador en el servidor.
+
 > [!TIP]
 > **Consejo de Seguridad**: Asegúrese siempre de descargar el ejecutable de este repositorio oficial de la organización **MRI Qbox Brasil**.
 
@@ -56,7 +59,9 @@ chmod +x mri_installer_linux
 
 Nos tomamos en serio la seguridad de nuestra comunidad. Por eso, integramos nuestro pipeline de publicación con la API de **VirusTotal**.
 
-Puede encontrar el sello de segurança y el enlace al informe técnico completo en la descripción de cada versión lanzada.
+Puede encontrar el sello de seguridad y el enlace al informe técnico completo en la descripción de cada versión lanzada.
+
+El instalador tampoco **incluye ninguna credencial**: la validación de acceso y la descarga de recetas ocurren en nuestros servidores, por lo que inspeccionar el binario no revela claves ni secretos.
 
 ---
 

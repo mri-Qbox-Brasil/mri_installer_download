@@ -15,7 +15,7 @@ Diferente de instaladores comuns, o MRI foi construído com foco em **estabilida
 
 - 🛡️ **Segurança Verificada**: Cada versão enviada para este repositório é automaticamente escaneada pelo **VirusTotal**. O link do relatório está disponível em cada release.
 - 💾 **Instalação Resiliente (Resume)**: Caiu a internet ou o PC desligou? O instalador detecta onde parou e retoma o progresso automaticamente, sem corromper arquivos.
-- 🗄️ **Banco de Dados Automático**: Não tem o MariaDB instalado? O software cuida disso pra você em background, com resiliência contra bloqueios do Windows (UAC).
+- 🗄️ **Banco de Dados Automático**: Não tem o MariaDB instalado? O software cuida disso pra você em background, com resiliência contra bloqueios do Windows (UAC). Já tem um banco? Aponte para qualquer host/porta existente e visualize a senha enquanto configura.
 - 👑 **txAdmin Personalizado**: O instalador configura automaticamente o nome do seu servidor e o idioma no painel administrativo.
 - 🌎 **Totalmente em Português**: Interface intuitiva e suporte completo ao nosso idioma (disponível também em Inglês e Espanhol).
 - 🐧 **Suporte a Linux**: Binário nativo para servidores Linux com instalador de terminal interativo ou totalmente automatizado via flags.
@@ -49,6 +49,9 @@ chmod +x mri_installer_linux
   --install-mariadb
 ```
 
+> [!NOTE]
+> No modo interativo, o instalador mostra um **código de liberação** de 8 caracteres. Autorize rodando `/liberar <código>` no nosso Discord **ou** abrindo o link exibido — não precisa de navegador no servidor.
+
 > [!TIP]
 > **Dica de Segurança**: Certifique-se sempre de baixar o executável deste repositório oficial da organização **MRI Qbox Brasil**.
 
@@ -57,6 +60,8 @@ chmod +x mri_installer_linux
 Nós levamos a segurança da nossa comunidade a sério. Por isso, integramos nosso pipeline de publicação com a API do **VirusTotal**.
 
 Você pode encontrar o selo de segurança e o link para o relatório técnico completo na descrição de cada versão lançada.
+
+O instalador também **não embute nenhuma credencial**: a validação de acesso e o download das receitas acontecem nos nossos servidores, então inspecionar o binário não revela chaves nem segredos.
 
 ---
 

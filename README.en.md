@@ -15,7 +15,7 @@ Unlike common installers, MRI was built with a focus on **stability** and **secu
 
 - 🛡️ **Verified Security**: Every version uploaded to this repository is automatically scanned by **VirusTotal**. The report link is available in each release.
 - 💾 **Resilient Installation (Resume)**: Did the internet drop or the PC shut down? The installer detects where it left off and resumes progress automatically, without corrupting files.
-- 🗄️ **Automatic Database**: Don't have MariaDB installed? The software takes care of it for you in the background, with resilience against Windows blocking (UAC).
+- 🗄️ **Automatic Database**: Don't have MariaDB installed? The software takes care of it for you in the background, with resilience against Windows blocking (UAC). Already have a database? Point it to any existing host/port and reveal the password while configuring.
 - 👑 **Personalized txAdmin**: The installer automatically configures your server name and language in the management panel.
 - 🇺🇸 **Multilingual Support**: Intuitive interface and full support for English, Portuguese, and Spanish.
 - 🐧 **Linux Support**: Native binary for Linux servers with an interactive terminal installer or fully automated via flags.
@@ -49,6 +49,9 @@ chmod +x mri_installer_linux
   --install-mariadb
 ```
 
+> [!NOTE]
+> In interactive mode, the installer shows an 8-character **authorization code**. Approve it by running `/liberar <code>` on our Discord **or** by opening the shown link — no browser needed on the server.
+
 > [!TIP]
 > **Security Tip**: Always make sure to download the executable from this official repository of the **MRI Qbox Brasil** organization.
 
@@ -57,6 +60,8 @@ chmod +x mri_installer_linux
 We take our community's security seriously. That's why we integrated our publishing pipeline with the **VirusTotal** API.
 
 You can find the security seal and the link to the full technical report in the description of each released version.
+
+The installer also **embeds no credentials**: access validation and recipe downloads happen on our servers, so inspecting the binary reveals no keys or secrets.
 
 ---
 
