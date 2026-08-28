@@ -47,6 +47,12 @@ chmod +x mri_installer_linux
   --license-key "cfxk_..." \
   --db-pass "senha" \
   --install-mariadb
+
+# Subcomandos, para quem já tem o servidor instalado
+./mri_installer_linux --login
+./mri_installer_linux --update-artifacts --install-path /opt/fivem/mri_qbox
+./mri_installer_linux --backup --install-path /opt/fivem/mri_qbox
+./mri_installer_linux --list-resources --install-path /opt/fivem/mri_qbox
 ```
 
 > [!NOTE]
