@@ -3,8 +3,8 @@ name: Build
 # Daily release of the installer: publishes what is new on the private source main, if anything.
 on:
   schedule:
-    # 03:17 in Brasília, off the hour because GitHub delays jobs queued at :00.
-    - cron: '17 6 * * *'
+    # 04:20 in Brasília (UTC-3).
+    - cron: '20 7 * * *'
   workflow_dispatch:
     inputs:
       tag:
