@@ -1,0 +1,28 @@
+name: Build
+
+# Builds and publishes an installer version already tagged in the private source repo.
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Source tag, e.g. v2.33.4'
+        required: true
+      publish:
+        description: 'Publish the release (off only builds)'
+        type: boolean
+        default: true
+
+concurrency:
+  group: build
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  build:
+    uses: mri-Qbox-Brasil/workflows/.github/workflows/callable-installer-build.yml@main
+    with:
+      tag: ${{ inputs.tag }}
+      publish: ${{ inputs.publish }}
