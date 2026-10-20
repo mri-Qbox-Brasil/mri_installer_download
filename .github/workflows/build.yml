@@ -1,12 +1,16 @@
 name: Build
 
-# Builds and publishes an installer version already tagged in the private source repo.
+# Daily release of the installer: publishes what is new on the private source main, if anything.
 on:
+  schedule:
+    # 03:17 in Brasília, off the hour because GitHub delays jobs queued at :00.
+    - cron: '17 6 * * *'
   workflow_dispatch:
     inputs:
       tag:
-        description: 'Source tag, e.g. v2.33.4'
-        required: true
+        description: 'Existing source tag to republish, e.g. v2.33.3 (empty releases what is new)'
+        required: false
+        default: ''
       publish:
         description: 'Publish the release (off only builds)'
         type: boolean
@@ -24,5 +28,15 @@ jobs:
   build:
     uses: mri-Qbox-Brasil/workflows/.github/workflows/callable-installer-build.yml@main
     with:
-      tag: ${{ inputs.tag }}
-      publish: ${{ inputs.publish }}
+      tag: ${{ inputs.tag || '' }}
+      publish: ${{ github.event_name == 'schedule' || inputs.publish }}
+
+  # GitHub turns schedules off after 60 days without commits; re-enabling resets that.
+  keepalive:
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      - env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X PUT "repos/${{ github.repository }}/actions/workflows/build.yml/enable"
