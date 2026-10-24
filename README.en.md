@@ -45,8 +45,7 @@ chmod +x mri_installer_linux
   --install-path /opt/fivem/mri_qbox \
   --server-name "My Server" \
   --license-key "cfxk_..." \
-  --db-pass "password" \
-  --install-mariadb
+  --db-pass "password"
 
 # Subcommands, for servers that are already installed
 ./mri_installer_linux --login
@@ -54,6 +53,9 @@ chmod +x mri_installer_linux
 ./mri_installer_linux --backup --install-path /opt/fivem/mri_qbox
 ./mri_installer_linux --list-resources --install-path /opt/fivem/mri_qbox
 ```
+
+> [!IMPORTANT]
+> On Linux the installer **does not install MariaDB**. Have a MariaDB or MySQL running beforehand (`sudo apt install mariadb-server` or a container) and pass its details with `--db-host`, `--db-port`, `--db-user` and `--db-pass`. The `--install-mariadb` flag only works on Windows.
 
 > [!NOTE]
 > In interactive mode, the installer shows an 8-character **authorization code**. Approve it by running `/liberar <code>` on our Discord **or** by opening the shown link — no browser needed on the server.
